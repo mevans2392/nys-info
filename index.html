@@ -1,0 +1,92 @@
+<html lang="en">
+    <head>
+        <title>New York State</title>
+        <meta charset="UTF-8" name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="home.css">
+    </head>
+    <body>
+        <heading>
+            <img id="nys1" src="newYorkFlag.jpeg" alt="New York State Flag">
+            <h1>New York State</h1>
+            <img id="nys2" src="newYorkFlag.jpeg" alt="New York State Flag">
+        </heading>
+        <nav> 
+            <a class="mainLink" href="capitol.html">Albany</a>
+            <a class="mainLink" href="syracuse.html">Syracuse</a>
+            <a class="mainLink" href="buffalo.html">Buffalo</a>
+        </nav>
+        <section>
+            <div id="info">
+                <p>New York, nicknamed The Empire State, is in the Northeast United States. It is a large state, measuring in at close to 55,000 square miles.</p>
+                <p>With so much space, it isn't a surprise that you can find many things to do within the borders of New York. </p>
+                <p>New York has professional sports teams, state parks, amusement parks, concert venues, shopping malls, and just about anything that you can think of to have a good time.</p>
+            </div>
+            <div id="sports">
+                <table>
+                    <caption><strong>Professional Sports Teams</strong></caption>
+                    <tr>
+                        <th>Football</th>
+                        <th>Baseball</th>
+                        <th>Basketball</th>
+                        <th>Hockey</th>
+                    </tr>
+                    <tr>
+                        <td>Buffalo Bills</td>
+                        <td>New York Yankees</td>
+                        <td>New York Knicks</td>
+                        <td>Buffalo Sabres</td>
+                    </tr>
+                    <tr>
+                        <td>New York Giants</td>
+                        <td>New York Mets</td>
+                        <td>Brooklyn Nets</td>
+                        <td>New York Islanders</td>
+                    </tr>
+                    <tr>
+                        <td>New York Jets</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <aside>
+            <div id="events">
+                <ol>Top Rated Attractions
+                    <li><a href="https://www.statueoflibertytickets.com/?gclid=CjwKCAjw9-6oBhBaEiwAHv1QvH6kAt1d9Hp-tEn80fz5cHjCjiAy-t7g-XBnJtXU9tyQ0_m3DCUxNBoCHp4QAvD_BwE" target="_blank">Statue of Liberty</a></li>
+                    <li><a href="https://www.niagarafallsstatepark.com/" target="_blank">Niagara Falls</a></a></li>
+                    <li><a href="https://www.centralparknyc.org/" target="_blank">Central Park</a></li>
+                    <li><a href="https://www.timessquarenyc.org/" target="_blank">Times Square</a></li>
+                    <li><a href="https://www.fingerlakes.org/" target="_blank">Finger Lakes</a></li>
+                </ol>
+                <p>List provided by <a href="https://www.planetware.com/tourist-attractions/new-york-usny.htm" target="_blank">planetware.com</a></a></p>
+            </div>
+            <div id="signUp">
+                <form id="userInfo">
+                    <input type="text" id="firstName" placeholder="First Name">
+                    <input type="text" id="lastName" placeholder="Last Name">
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <input type="email" id="validateEmail" name="validateEmail" placeholder="Confirm Email">
+                    <textarea id="question" placeholder="Do you have a question?"></textarea>
+                    <input type="submit" id="submit" value="submit">
+                </form>
+            </div>
+        </aside>
+        <script>
+            function validateEmail(event) {
+                let userInfo = document.querySelector("#userInfo");
+                let email = userInfo.email.value;
+                let validateEmail = userInfo.validateEmail.value;
+                if (validateEmail != email) {
+                    event.preventDefault();
+                    userInfo.validateEmail.style.border = "3px solid red";
+                } else {
+                    userInfo.validateEmail.style.border = "1px solid black";
+                }
+            }
+            let userInfo = document.querySelector("#userInfo");
+            userInfo.validateEmail.addEventListener("keyup", validateEmail)
+        </script>
+    </body>
+</html>

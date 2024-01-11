@@ -1,0 +1,104 @@
+body {
+    font-family: tahoma;
+    background: rgba(255, 255, 0, .3);
+}
+heading {
+    width: 100%;
+    text-align: center
+}
+nav {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+nav a {
+    position: relative;
+    font-size: 14pt;
+    color: blue;
+}
+nav a:hover {
+    font-size: 18pt;
+}
+section {
+    width: 70%;
+    height: 1000px;
+    margin-top: 20px;
+    float: left;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+        "info1 pic1"
+        "pic2 info2";
+}
+#info1 {
+    grid-area: info1;
+    background: rgba(173, 216, 230, .8);
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10%;
+}
+#info1 h1 {
+    margin-top: 35%;
+    text-align: center;
+}
+#pic1 {
+    grid-area: pic1;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+#pic1 img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+}
+#pic2 {
+    grid-area: pic2;
+    margin: 10px;
+}
+#pic2 img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+}
+#info2 {
+    grid-area: info2;
+    background: rgba(173, 216, 230, .5);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 10%;
+}
+#info2 h1 {
+    text-align: center;
+    margin-top: 15%;
+}
+aside {
+    width: 25%;
+    height: 1000px;
+    margin-top: 20px;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+table {
+    border: 1px solid black;
+    background: rgba(173, 216, 230, .8);
+    bottom: 100px;
+    position: absolute;
+    bottom: 550px;
+}
+td {
+    border: 1px solid black;
+    width: 200px;
+    background-color: white;
+}
+.secondTable {
+    position: absolute;
+    bottom: 300px;
+}
